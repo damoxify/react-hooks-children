@@ -6,6 +6,8 @@ function Container({
   textPosition = "", // possible values: left, right, center
   direction = "horizontal", // possible values: vertical, horizontal
   contentPosition = "center", // possible values: left, right, center
+  imgSrc,
+  alt
 }) {
   return (
     <div className={`container ${textPosition}`}>
@@ -13,6 +15,7 @@ function Container({
 
       <div className={`container-children ${direction} ${contentPosition}`}>
         {children}
+        <img src={imgSrc} alt={alt}  />
       </div>
     </div>
   );
